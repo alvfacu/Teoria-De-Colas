@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6D7D0039-37B0-4F7A-BCC5-52BE86DEB72C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Trabajo_Practico_Simulacion</RootNamespace>
+    <AssemblyName>Trabajo Practico Simulacion</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Mattahan-Buuf-Network-Statistics.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MathNet.Numerics, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.3.11.0\lib\net40\MathNet.Numerics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="form_1sp_exponencial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_1sp_exponencial.Designer.cs">
+      <DependentUpon>form_1sp_exponencial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_3sp_exponencial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_3sp_exponencial.Designer.cs">
+      <DependentUpon>form_3sp_exponencial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_4sp_exponencial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_4sp_exponencial.Designer.cs">
+      <DependentUpon>form_4sp_exponencial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_5sp_exponencial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_5sp_exponencial.Designer.cs">
+      <DependentUpon>form_5sp_exponencial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_cantidadservidores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_cantidadservidores.Designer.cs">
+      <DependentUpon>form_cantidadservidores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DosServidoresSerie_Exp.cs" />
+    <Compile Include="form_2ss_exponencial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_2ss_exponencial.Designer.cs">
+      <DependentUpon>form_2ss_exponencial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_2sp_exponencial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_2sp_exponencial.Designer.cs">
+      <DependentUpon>form_2sp_exponencial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_principal.Designer.cs">
+      <DependentUpon>form_principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_seleccion_distribucion_ss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_seleccion_distribucion_ss.Designer.cs">
+      <DependentUpon>form_seleccion_distribucion_ss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_ss_continua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_ss_continua.Designer.cs">
+      <DependentUpon>form_ss_continua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_ss_erlang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_ss_erlang.Designer.cs">
+      <DependentUpon>form_ss_erlang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_ss_exponencial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_ss_exponencial.Designer.cs">
+      <DependentUpon>form_ss_exponencial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NrosAleatorios.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServidoresParalelo_Exp.cs" />
+    <Compile Include="ServidorSimple_Con.cs" />
+    <Compile Include="ServidorSimple_Erl.cs" />
+    <Compile Include="ServidorSimple_Exp.cs" />
+    <EmbeddedResource Include="form_1sp_exponencial.resx">
+      <DependentUpon>form_1sp_exponencial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_3sp_exponencial.resx">
+      <DependentUpon>form_3sp_exponencial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_4sp_exponencial.resx">
+      <DependentUpon>form_4sp_exponencial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_cantidadservidores.resx">
+      <DependentUpon>form_cantidadservidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_2ss_exponencial.resx">
+      <DependentUpon>form_2ss_exponencial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_2sp_exponencial.resx">
+      <DependentUpon>form_2sp_exponencial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_principal.resx">
+      <DependentUpon>form_principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_seleccion_distribucion_ss.resx">
+      <DependentUpon>form_seleccion_distribucion_ss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_ss_continua.resx">
+      <DependentUpon>form_ss_continua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_ss_erlang.resx">
+      <DependentUpon>form_ss_erlang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_ss_exponencial.resx">
+      <DependentUpon>form_ss_exponencial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mattahan-Buuf-Network-Statistics.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
