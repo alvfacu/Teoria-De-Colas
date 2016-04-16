@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -501,5 +502,6 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Paralelo.Weibull
                 txtTDS4_b.Text = "[0,1;0,9]";
             }
         }
+                
     }
 }

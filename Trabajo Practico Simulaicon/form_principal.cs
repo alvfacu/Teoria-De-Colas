@@ -38,5 +38,11 @@ namespace Trabajo_Practico_Simulaicon
             form_cantidadservidores form = new form_cantidadservidores('c');
             form.ShowDialog();
         }
+
+        private void btn_jocking_Click(object sender, EventArgs e)
+        {
+            form_seleccion_distribucion form = new form_seleccion_distribucion('d');
+            form.ShowDialog();
+        }
     }
 }

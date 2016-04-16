@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -101,7 +102,7 @@ namespace Trabajo_Practico_Simulacion.Servidor_Simple
                 utilizacion_serv.Series[nom_graf].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
                 utilizacion_serv.Series[nom_graf].Color = Color.Blue;
                 utilizacion_serv.Series[nom_graf].BorderWidth = 3;
-                                
+
                 NrosAleatorios.GenerarNros(Convert.ToInt32(txtHs.Text));
 
                 for (int i = 0; i < tiempos.Length; i++)
@@ -306,16 +307,6 @@ namespace Trabajo_Practico_Simulacion.Servidor_Simple
 
             return msj;
         }
-
-        private void form_ss_uniforme_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbxDTDS_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            
-        }
+        
     }
 }

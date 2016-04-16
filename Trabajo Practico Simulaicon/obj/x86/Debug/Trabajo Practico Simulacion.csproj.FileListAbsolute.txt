@@ -181,7 +181,6 @@ C:\Users\Facundo\Documents\NET\Trabajo Practico Simulacion V4.4\Trabajo Practico
 C:\Users\Facundo\Documents\NET\Trabajo Practico Simulacion V4.4\Trabajo Practico Simulacion\Trabajo Practico Simulaicon\obj\x86\Debug\Trabajo Practico Simulacion.csproj.GenerateResource.Cache
 C:\Users\Facundo\Documents\NET\Trabajo Practico Simulacion V4.4\Trabajo Practico Simulacion\Trabajo Practico Simulaicon\obj\x86\Debug\Trabajo Practico Simulacion.exe.manifest
 C:\Users\Facundo\Documents\NET\Trabajo Practico Simulacion V4.4\Trabajo Practico Simulacion\Trabajo Practico Simulaicon\obj\x86\Debug\Trabajo Practico Simulacion.application
-C:\Users\Facundo\Documents\NET\Trabajo Practico Simulacion\Trabajo Practico Simulaicon\obj\x86\Debug\Trabajo Practico Simulacion.csprojResolveAssemblyReference.cache
 C:\Users\Miriam L. Calcaterra\Desktop\Trabajo Practico Simulacion V4.5\Trabajo Practico Simulacion\Trabajo Practico Simulaicon\obj\x86\Debug\Trabajo Practico Simulacion.exe
 C:\Users\Miriam L. Calcaterra\Desktop\Trabajo Practico Simulacion V4.5\Trabajo Practico Simulacion\Trabajo Practico Simulaicon\obj\x86\Debug\Trabajo Practico Simulacion.pdb
 C:\Users\Facundo\Documents\NET\Trabajo Practico Simulacion V4.6\Trabajo Practico Simulacion\Trabajo Practico Simulaicon\obj\x86\Debug\Trabajo Practico Simulacion.exe
@@ -221,3 +220,5 @@ C:\Users\Facundo\Documents\NET\Trabajo Practico Simulacion V4.6\Trabajo Practico
 C:\Users\Facundo\Documents\NET\Trabajo Practico Simulacion V4.6\Trabajo Practico Simulacion\Trabajo Practico Simulaicon\bin\Debug\MathNet.Numerics.xml
 C:\Users\Facundo\Documents\NET\Trabajo Practico Simulacion V4.6\Trabajo Practico Simulacion\Trabajo Practico Simulaicon\obj\x86\Debug\Trabajo Practico Simulacion.exe.manifest
 C:\Users\Facundo\Documents\NET\Trabajo Practico Simulacion V4.6\Trabajo Practico Simulacion\Trabajo Practico Simulaicon\obj\x86\Debug\Trabajo Practico Simulacion.application
+C:\Users\Facundo\Documents\NET\Trabajo Practico Simulacion\Trabajo Practico Simulaicon\bin\Debug\Trabajo Practico Simulacion.exe.config
+C:\Users\Facundo\Documents\NET\Trabajo Practico Simulacion\Trabajo Practico Simulaicon\bin\Debug\MySql.Data.dll

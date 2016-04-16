@@ -42,17 +42,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTDS = new System.Windows.Forms.TextBox();
             this.btn_simular = new System.Windows.Forms.Button();
-            this.cli_en_cola = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label4 = new System.Windows.Forms.Label();
             this.chkArribo = new System.Windows.Forms.CheckBox();
             this.chkServicio = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dem_prom_cli = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label6 = new System.Windows.Forms.Label();
             this.utilizacion_serv = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.cli_en_cola)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dem_prom_cli)).BeginInit();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dem_prom_cli = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cli_en_cola = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.utilizacion_serv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dem_prom_cli)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cli_en_cola)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -113,27 +113,6 @@
             this.btn_simular.UseVisualStyleBackColor = true;
             this.btn_simular.Click += new System.EventHandler(this.btn_simular_Click);
             // 
-            // cli_en_cola
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.cli_en_cola.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.cli_en_cola.Legends.Add(legend1);
-            this.cli_en_cola.Location = new System.Drawing.Point(24, 73);
-            this.cli_en_cola.Name = "cli_en_cola";
-            this.cli_en_cola.Size = new System.Drawing.Size(514, 178);
-            this.cli_en_cola.TabIndex = 7;
-            this.cli_en_cola.Text = "chart1";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 55);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Cant de Clientes en Cola";
-            // 
             // chkArribo
             // 
             this.chkArribo.AutoSize = true;
@@ -154,13 +133,34 @@
             this.chkServicio.UseVisualStyleBackColor = true;
             this.chkServicio.CheckedChanged += new System.EventHandler(this.chkServicio_CheckedChanged);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(18, 466);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(114, 13);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Utilización del Servidor";
+            // 
+            // utilizacion_serv
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.utilizacion_serv.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.utilizacion_serv.Legends.Add(legend1);
+            this.utilizacion_serv.Location = new System.Drawing.Point(15, 484);
+            this.utilizacion_serv.Name = "utilizacion_serv";
+            this.utilizacion_serv.Size = new System.Drawing.Size(514, 178);
+            this.utilizacion_serv.TabIndex = 19;
+            this.utilizacion_serv.Text = "chart1";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 263);
+            this.label5.Location = new System.Drawing.Point(18, 262);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(146, 13);
-            this.label5.TabIndex = 12;
+            this.label5.TabIndex = 18;
             this.label5.Text = "Demora Promedio de Clientes";
             // 
             // dem_prom_cli
@@ -169,47 +169,47 @@
             this.dem_prom_cli.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.dem_prom_cli.Legends.Add(legend2);
-            this.dem_prom_cli.Location = new System.Drawing.Point(24, 281);
+            this.dem_prom_cli.Location = new System.Drawing.Point(15, 280);
             this.dem_prom_cli.Name = "dem_prom_cli";
             this.dem_prom_cli.Size = new System.Drawing.Size(514, 178);
-            this.dem_prom_cli.TabIndex = 11;
+            this.dem_prom_cli.TabIndex = 17;
             this.dem_prom_cli.Text = "chart1";
             // 
-            // label6
+            // label4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 467);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Utilización del Servidor";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 54);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(123, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Cant de Clientes en Cola";
             // 
-            // utilizacion_serv
+            // cli_en_cola
             // 
             chartArea3.Name = "ChartArea1";
-            this.utilizacion_serv.ChartAreas.Add(chartArea3);
+            this.cli_en_cola.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
-            this.utilizacion_serv.Legends.Add(legend3);
-            this.utilizacion_serv.Location = new System.Drawing.Point(24, 485);
-            this.utilizacion_serv.Name = "utilizacion_serv";
-            this.utilizacion_serv.Size = new System.Drawing.Size(514, 178);
-            this.utilizacion_serv.TabIndex = 13;
-            this.utilizacion_serv.Text = "chart1";
+            this.cli_en_cola.Legends.Add(legend3);
+            this.cli_en_cola.Location = new System.Drawing.Point(15, 72);
+            this.cli_en_cola.Name = "cli_en_cola";
+            this.cli_en_cola.Size = new System.Drawing.Size(514, 178);
+            this.cli_en_cola.TabIndex = 15;
+            this.cli_en_cola.Text = "chart1";
             // 
             // form_ss_exponencial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(558, 675);
+            this.ClientSize = new System.Drawing.Size(547, 675);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.utilizacion_serv);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dem_prom_cli);
-            this.Controls.Add(this.chkServicio);
-            this.Controls.Add(this.chkArribo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cli_en_cola);
+            this.Controls.Add(this.chkServicio);
+            this.Controls.Add(this.chkArribo);
             this.Controls.Add(this.btn_simular);
             this.Controls.Add(this.txtTDS);
             this.Controls.Add(this.label3);
@@ -222,9 +222,9 @@
             this.Name = "form_ss_exponencial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Servidor Simple - Distribución Exponencial";
-            ((System.ComponentModel.ISupportInitialize)(this.cli_en_cola)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dem_prom_cli)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.utilizacion_serv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dem_prom_cli)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cli_en_cola)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,13 +239,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTDS;
         private System.Windows.Forms.Button btn_simular;
-        private System.Windows.Forms.DataVisualization.Charting.Chart cli_en_cola;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox chkArribo;
         private System.Windows.Forms.CheckBox chkServicio;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataVisualization.Charting.Chart dem_prom_cli;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataVisualization.Charting.Chart utilizacion_serv;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataVisualization.Charting.Chart dem_prom_cli;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart cli_en_cola;
     }
 }

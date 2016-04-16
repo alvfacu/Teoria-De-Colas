@@ -67,13 +67,13 @@
             // 
             // btn_jocking
             // 
-            this.btn_jocking.Enabled = false;
             this.btn_jocking.Image = ((System.Drawing.Image)(resources.GetObject("btn_jocking.Image")));
             this.btn_jocking.Location = new System.Drawing.Point(12, 387);
             this.btn_jocking.Name = "btn_jocking";
             this.btn_jocking.Size = new System.Drawing.Size(476, 253);
             this.btn_jocking.TabIndex = 4;
             this.btn_jocking.UseVisualStyleBackColor = true;
+            this.btn_jocking.Click += new System.EventHandler(this.btn_jocking_Click);
             // 
             // form_principal
             // 

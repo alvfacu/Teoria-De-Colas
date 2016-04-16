@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -109,7 +110,6 @@ namespace Trabajo_Practico_Simulacion.Servidor_Simple
                 utilizacion_serv.Series[nom_graf].Color = Color.Blue;
                 utilizacion_serv.Series[nom_graf].BorderWidth = 3;
 
-
                 NrosAleatorios.GenerarNros(Convert.ToInt32(txtHs.Text));
 
                 for (int i = 0; i < tiempos.Length; i++)
@@ -162,7 +162,7 @@ namespace Trabajo_Practico_Simulacion.Servidor_Simple
 
                     NrosAleatorios.ReiniciarR();
                 }
-
+                
                 cli_en_cola.ChartAreas[0].AxisY.Maximum = DameMaximo(cli_cola) * 1.2;
                 dem_prom_cli.ChartAreas[0].AxisY.Maximum = DameMaximo(dem_prom) * 1.2;
                 utilizacion_serv.ChartAreas[0].AxisY.Maximum = DameMaximo(utilizacion) * 1.2;
@@ -278,5 +278,6 @@ namespace Trabajo_Practico_Simulacion.Servidor_Simple
 
             return msj;
         }
+                
     }
 }

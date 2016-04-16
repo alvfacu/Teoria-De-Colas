@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -216,8 +217,7 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Serie.Uniforme
                         {
                             txtTDS4_b.Text = txtTDS4_b.Text.Replace('.', ',');
                         }
-
-
+                        
                         TDS.Add(Convert.ToDouble(txtTDS1_a.Text));
                         TDS.Add(Convert.ToDouble(txtTDS1_b.Text));
                         TDS.Add(Convert.ToDouble(txtTDS2_a.Text));
@@ -291,7 +291,7 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Serie.Uniforme
                     utilizacion4.Add(MultiplesServidores.UtilServidor(3));
 
                     NrosAleatorios.ReiniciarR();
-                }
+                }                       
 
                 cli_en_cola_s1.ChartAreas[0].AxisY.Maximum = DameMaximo(cli_cola1) * 1.2;
                 dem_prom_cli_s1.ChartAreas[0].AxisY.Maximum = DameMaximo(dem_prom1) * 1.2;
@@ -578,5 +578,6 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Serie.Uniforme
 
             }
         }
+        
     }
 }

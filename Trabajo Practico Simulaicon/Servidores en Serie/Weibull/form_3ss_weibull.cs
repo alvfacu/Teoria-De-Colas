@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -210,7 +211,7 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Serie.Weibull
 
                     NrosAleatorios.ReiniciarR();
                 }
-
+                
                 cli_en_cola_s1.ChartAreas[0].AxisY.Maximum = DameMaximo(cli_cola1) * 1.2;
                 dem_prom_cli_s1.ChartAreas[0].AxisY.Maximum = DameMaximo(dem_prom1) * 1.2;
                 utilizacion_serv1.ChartAreas[0].AxisY.Maximum = DameMaximo(utilizacion1) * 1.2;
@@ -429,5 +430,6 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Serie.Weibull
                 txtTDS3_b.Text = "[0,1;0,9]";
             }
         }
+        
     }
 }
