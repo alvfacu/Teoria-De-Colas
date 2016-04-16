@@ -15,6 +15,7 @@ namespace Trabajo_Practico_Simulaicon
         public double tea_a, tea_b, tds_a, tds_b;
 
         public char tipo;
+
         char tipotea, tipotds;
         List<double> arribos = new List<double> {0};
 
