@@ -85,6 +85,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="form_seleccion_distribucion_ss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_seleccion_distribucion_ss.Designer.cs">
+      <DependentUpon>form_seleccion_distribucion_ss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servidor Simple\form_ss_comparativa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servidor Simple\form_ss_comparativa.Designer.cs">
+      <DependentUpon>form_ss_comparativa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Servidor Simple\form_ss_uniforme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +254,12 @@
       <DependentUpon>form_3spci_exponencial.cs</DependentUpon>
     </Compile>
     <Compile Include="Servidores Paralelos con colas indep\Servidores paralelos con colas indep.cs" />
+    <EmbeddedResource Include="form_seleccion_distribucion_ss.resx">
+      <DependentUpon>form_seleccion_distribucion_ss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servidor Simple\form_ss_comparativa.resx">
+      <DependentUpon>form_ss_comparativa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Servidor Simple\form_ss_uniforme.resx">
       <DependentUpon>form_ss_uniforme.cs</DependentUpon>
     </EmbeddedResource>

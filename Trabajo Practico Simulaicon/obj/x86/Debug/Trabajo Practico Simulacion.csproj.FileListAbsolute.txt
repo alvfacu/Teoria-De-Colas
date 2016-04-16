@@ -222,3 +222,6 @@ C:\Users\Facundo\Documents\NET\Trabajo Practico Simulacion V4.6\Trabajo Practico
 C:\Users\Facundo\Documents\NET\Trabajo Practico Simulacion V4.6\Trabajo Practico Simulacion\Trabajo Practico Simulaicon\obj\x86\Debug\Trabajo Practico Simulacion.application
 C:\Users\Facundo\Documents\NET\Trabajo Practico Simulacion\Trabajo Practico Simulaicon\bin\Debug\Trabajo Practico Simulacion.exe.config
 C:\Users\Facundo\Documents\NET\Trabajo Practico Simulacion\Trabajo Practico Simulaicon\bin\Debug\MySql.Data.dll
+C:\Users\Facundo\Documents\NET\Trabajo Practico Simulacion\Trabajo Practico Simulaicon\obj\x86\Debug\Trabajo Practico Simulacion.csprojResolveAssemblyReference.cache
+C:\Users\Facundo\Documents\NET\Trabajo Practico Simulacion\Trabajo Practico Simulaicon\obj\x86\Debug\Trabajo_Practico_Simulacion.form_seleccion_distribucion_ss.resources
+C:\Users\Facundo\Documents\NET\Trabajo Practico Simulacion\Trabajo Practico Simulaicon\obj\x86\Debug\Trabajo_Practico_Simulacion.Servidor_Simple.form_ss_comparativa.resources

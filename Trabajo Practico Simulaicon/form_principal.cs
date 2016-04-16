@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Trabajo_Practico_Simulacion;
 
 namespace Trabajo_Practico_Simulaicon
 {
@@ -23,7 +24,7 @@ namespace Trabajo_Practico_Simulaicon
 
         private void btn_servidor_simple_Click(object sender, EventArgs e)
         {
-            form_seleccion_distribucion form = new form_seleccion_distribucion('a');
+            form_seleccion_distribucion_ss form = new form_seleccion_distribucion_ss();
             form.ShowDialog();
         }
 
