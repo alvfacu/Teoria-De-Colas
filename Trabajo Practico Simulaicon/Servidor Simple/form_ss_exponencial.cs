@@ -137,7 +137,7 @@ namespace Trabajo_Practico_Simulaicon
                     default: break;
 
                 }
-                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK);
+                MessageBox.Show(mensaje, "¡ Atención !", MessageBoxButtons.OK);
             }
 
         }

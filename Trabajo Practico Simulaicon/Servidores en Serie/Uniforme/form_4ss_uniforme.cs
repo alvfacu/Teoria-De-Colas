@@ -44,8 +44,7 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Serie.Uniforme
 
         private void btn_simular_Click(object sender, EventArgs e)
         {
-            //int msj = Validar(this.Controls);
-            int msj = 0;
+            int msj = Validar(this.Controls);
             if (msj == 0)
             {
                 c = form_cantidadservidores.nro + 1;
@@ -323,19 +322,19 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Serie.Uniforme
                         mensaje = "Verifique el formato las horas: deben ser enteras.";
                         break;
                     case (3):
-                        mensaje = "El TDS tiene que ser un decimal entre 0,1 y 1.";
+                        mensaje = "Los TDS tienen que ser números decimales entre 0,1 y 1.";
                         break;
                     case (4):
                         mensaje = "El TEA tiene que ser un decimal entre 0,1 y 1.";
                         break;
                     case (5):
-                        mensaje = "El TDS tiene que ser un decimal entre 0,1 y 1.";
+                        mensaje = "Los TDS tienen que ser números decimales entre 0,1 y 1.";
                         break;
                     case (6):
                         mensaje = "El TEA tiene que ser un decimal entre 0,1 y 1.";
                         break;
                     case (7):
-                        mensaje = "Debe ingresar un TEA o un TDS";
+                        mensaje = "Debe ingresar el TEA o los TDS";
                         break;
                     case (8):
                         mensaje = "El valor de a no puede ser mayor que el de b";
@@ -343,7 +342,7 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Serie.Uniforme
                     default: break;
 
                 }
-                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK);
+                MessageBox.Show(mensaje, " ¡ Atención !", MessageBoxButtons.OK);
             }
         }
 
@@ -362,7 +361,7 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Serie.Uniforme
             bool est = false;
             foreach (Control c in controls)
             {
-                if (c is TextBox & c.Text == String.Empty)
+                if (c.Visible == true & c is TextBox & c.Text == String.Empty)
                 {
                     msj = 1;
                     est = true;
@@ -377,124 +376,123 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Serie.Uniforme
                 }
                 //else if (this.chkArribo.Checked)
                 //{
-                if (txtTEA_a.Text.Contains("."))
+                if (txtTEA_a.Visible == true)
                 {
-                    txtTEA_a.Text = txtTEA_a.Text.Replace('.', ',');
-                }
-                if (!(Double.TryParse(txtTEA_a.Text, out res)))
-                {
-                    msj = 4;
-                }
-                else if (Convert.ToDouble(txtTEA_a.Text) < 0.1 || Convert.ToDouble(txtTEA_a.Text) > 1)
-                {
-                    msj = 6;
-                }
-                if (txtTEA_b.Text.Contains("."))
-                {
-                    txtTEA_b.Text = txtTEA_b.Text.Replace('.', ',');
-                }
-                if (!(Double.TryParse(txtTEA_b.Text, out res)))
-                {
-                    msj = 4;
-                }
-                else if (Convert.ToDouble(txtTEA_b.Text) < 0.1 || Convert.ToDouble(txtTEA_b.Text) > 1)
-                {
-                    msj = 6;
-                }
-                if (Convert.ToDouble(txtTEA_a.Text) > Convert.ToDouble(txtTEA_b.Text))
-                {
-                    msj = 8;
+                    if (txtTEA_a.Text.Contains("."))
+                    {
+                        txtTEA_a.Text = txtTEA_a.Text.Replace('.', ',');
+                    }
+                    if (txtTEA_b.Text.Contains("."))
+                    {
+                        txtTEA_b.Text = txtTEA_b.Text.Replace('.', ',');
+                    }
+                    if (!(Double.TryParse(txtTEA_a.Text, out res)) || !(Double.TryParse(txtTEA_b.Text, out res)))
+                    {
+                        msj = 4;
+                    }
+                    else if ((Convert.ToDouble(txtTEA_a.Text) < 0.1 || Convert.ToDouble(txtTEA_a.Text) > 1) || (Convert.ToDouble(txtTEA_b.Text) < 0.1 || Convert.ToDouble(txtTEA_b.Text) > 1))
+                    {
+                        msj = 6;
+                    }
+                    if (Convert.ToDouble(txtTEA_a.Text) > Convert.ToDouble(txtTEA_b.Text))
+                    {
+                        msj = 8;
+                    }
                 }
                 //}
                 //else if (this.chkServicio.Checked)
                 //{
-                if (txtTDS1_a.Text.Contains("."))
+                if (txtTDS1_a.Visible == true)
                 {
-                    txtTDS1_a.Text = txtTDS1_a.Text.Replace('.', ',');
-                }
-                if (txtTDS1_b.Text.Contains("."))
-                {
-                    txtTDS1_b.Text = txtTDS1_b.Text.Replace('.', ',');
-                }
-                if (!(Double.TryParse(txtTDS1_a.Text, out res)) || !(Double.TryParse(txtTDS1_b.Text, out res)))
-                {
-                    msj = 3;
-                }
-                else if ((Convert.ToDouble(txtTDS1_a.Text) < 0.1 || Convert.ToDouble(txtTDS1_a.Text) > 1) || (Convert.ToDouble(txtTDS1_b.Text) < 0.1 || Convert.ToDouble(txtTDS1_b.Text) > 1))
-                {
-                    msj = 5;
-                }
-                if (Convert.ToDouble(txtTDS1_a.Text) > Convert.ToDouble(txtTDS1_b.Text))
-                {
-                    msj = 8;
-                }
+                    if (txtTDS1_a.Text.Contains("."))
+                    {
+                        txtTDS1_a.Text = txtTDS1_a.Text.Replace('.', ',');
+                    }
+                    if (txtTDS1_b.Text.Contains("."))
+                    {
+                        txtTDS1_b.Text = txtTDS1_b.Text.Replace('.', ',');
+                    }
+                    if (!(Double.TryParse(txtTDS1_a.Text, out res)) || !(Double.TryParse(txtTDS1_b.Text, out res)))
+                    {
+                        msj = 3;
+                    }
+                    else if ((Convert.ToDouble(txtTDS1_a.Text) < 0.1 || Convert.ToDouble(txtTDS1_a.Text) > 1) || (Convert.ToDouble(txtTDS1_b.Text) < 0.1 || Convert.ToDouble(txtTDS1_b.Text) > 1))
+                    {
+                        msj = 5;
+                    }
+                    if (Convert.ToDouble(txtTDS1_a.Text) > Convert.ToDouble(txtTDS1_b.Text))
+                    {
+                        msj = 8;
+                    }
 
-                if (txtTDS2_a.Text.Contains("."))
-                {
-                    txtTDS2_a.Text = txtTDS2_a.Text.Replace('.', ',');
-                }
-                if (txtTDS2_b.Text.Contains("."))
-                {
-                    txtTDS2_b.Text = txtTDS2_b.Text.Replace('.', ',');
-                }
-                if (!(Double.TryParse(txtTDS2_a.Text, out res)) || !(Double.TryParse(txtTDS2_b.Text, out res)))
-                {
-                    msj = 3;
-                }
-                else if ((Convert.ToDouble(txtTDS2_a.Text) < 0.1 || Convert.ToDouble(txtTDS2_a.Text) > 1) || (Convert.ToDouble(txtTDS2_b.Text) < 0.1 || Convert.ToDouble(txtTDS2_b.Text) > 1))
-                {
-                    msj = 5;
-                }
-                if (Convert.ToDouble(txtTDS2_a.Text) > Convert.ToDouble(txtTDS2_b.Text))
-                {
-                    msj = 8;
-                }
+                    if (txtTDS2_a.Text.Contains("."))
+                    {
+                        txtTDS2_a.Text = txtTDS2_a.Text.Replace('.', ',');
+                    }
+                    if (txtTDS2_b.Text.Contains("."))
+                    {
+                        txtTDS2_b.Text = txtTDS2_b.Text.Replace('.', ',');
+                    }
+                    if (!(Double.TryParse(txtTDS2_a.Text, out res)) || !(Double.TryParse(txtTDS2_b.Text, out res)))
+                    {
+                        msj = 3;
+                    }
+                    else if ((Convert.ToDouble(txtTDS2_a.Text) < 0.1 || Convert.ToDouble(txtTDS2_a.Text) > 1) || (Convert.ToDouble(txtTDS2_b.Text) < 0.1 || Convert.ToDouble(txtTDS2_b.Text) > 1))
+                    {
+                        msj = 5;
+                    }
+                    if (Convert.ToDouble(txtTDS2_a.Text) > Convert.ToDouble(txtTDS2_b.Text))
+                    {
+                        msj = 8;
+                    }
 
-                if (txtTDS3_a.Text.Contains("."))
-                {
-                    txtTDS3_a.Text = txtTDS3_a.Text.Replace('.', ',');
-                }
-                if (txtTDS3_b.Text.Contains("."))
-                {
-                    txtTDS3_b.Text = txtTDS3_b.Text.Replace('.', ',');
-                }
-                if (!(Double.TryParse(txtTDS3_a.Text, out res)) || !(Double.TryParse(txtTDS3_b.Text, out res)))
-                {
-                    msj = 3;
-                }
-                else if ((Convert.ToDouble(txtTDS3_a.Text) < 0.1 || Convert.ToDouble(txtTDS3_a.Text) > 1) || (Convert.ToDouble(txtTDS3_b.Text) < 0.1 || Convert.ToDouble(txtTDS3_b.Text) > 1))
-                {
-                    msj = 5;
-                }
-                if (Convert.ToDouble(txtTDS3_a.Text) > Convert.ToDouble(txtTDS3_b.Text))
-                {
-                    msj = 8;
-                }
+                    if (txtTDS3_a.Text.Contains("."))
+                    {
+                        txtTDS3_a.Text = txtTDS3_a.Text.Replace('.', ',');
+                    }
+                    if (txtTDS3_b.Text.Contains("."))
+                    {
+                        txtTDS3_b.Text = txtTDS3_b.Text.Replace('.', ',');
+                    }
+                    if (!(Double.TryParse(txtTDS3_a.Text, out res)) || !(Double.TryParse(txtTDS3_b.Text, out res)))
+                    {
+                        msj = 3;
+                    }
+                    else if ((Convert.ToDouble(txtTDS3_a.Text) < 0.1 || Convert.ToDouble(txtTDS3_a.Text) > 1) || (Convert.ToDouble(txtTDS3_b.Text) < 0.1 || Convert.ToDouble(txtTDS3_b.Text) > 1))
+                    {
+                        msj = 5;
+                    }
+                    if (Convert.ToDouble(txtTDS3_a.Text) > Convert.ToDouble(txtTDS3_b.Text))
+                    {
+                        msj = 8;
+                    }
 
-                if (txtTDS4_a.Text.Contains("."))
-                {
-                    txtTDS4_a.Text = txtTDS4_a.Text.Replace('.', ',');
+                    if (txtTDS4_a.Text.Contains("."))
+                    {
+                        txtTDS4_a.Text = txtTDS4_a.Text.Replace('.', ',');
+                    }
+                    if (txtTDS4_b.Text.Contains("."))
+                    {
+                        txtTDS4_b.Text = txtTDS4_b.Text.Replace('.', ',');
+                    }
+                    if (!(Double.TryParse(txtTDS4_a.Text, out res)) || !(Double.TryParse(txtTDS4_b.Text, out res)))
+                    {
+                        msj = 3;
+                    }
+                    else if ((Convert.ToDouble(txtTDS4_a.Text) < 0.1 || Convert.ToDouble(txtTDS4_a.Text) > 1) || (Convert.ToDouble(txtTDS4_b.Text) < 0.1 || Convert.ToDouble(txtTDS4_b.Text) > 1))
+                    {
+                        msj = 5;
+                    }
+                    if (Convert.ToDouble(txtTDS4_a.Text) > Convert.ToDouble(txtTDS4_b.Text))
+                    {
+                        msj = 8;
+                    }
                 }
-                if (txtTDS4_b.Text.Contains("."))
+                //}
+                /*else
                 {
-                    txtTDS4_b.Text = txtTDS4_b.Text.Replace('.', ',');
-                }
-                if (!(Double.TryParse(txtTDS4_a.Text, out res)) || !(Double.TryParse(txtTDS4_b.Text, out res)))
-                {
-                    msj = 3;
-                }
-                else if ((Convert.ToDouble(txtTDS4_a.Text) < 0.1 || Convert.ToDouble(txtTDS4_a.Text) > 1) || (Convert.ToDouble(txtTDS4_b.Text) < 0.1 || Convert.ToDouble(txtTDS4_b.Text) > 1))
-                {
-                    msj = 5;
-                }
-                if (Convert.ToDouble(txtTDS4_a.Text) > Convert.ToDouble(txtTDS4_b.Text))
-                {
-                    msj = 8;
-                }
-            }
-            else
-            {
-                msj = 7;
+                    msj = 7;
+                }*/
             }
 
             return msj;
@@ -524,6 +522,14 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Serie.Uniforme
                 txtTDS3_b.Visible = false;
                 txtTDS4_a.Visible = false;
                 txtTDS4_b.Visible = false;
+                txtTDS1_a.Clear();
+                txtTDS1_b.Clear();
+                txtTDS2_a.Clear();
+                txtTDS2_b.Clear();
+                txtTDS3_a.Clear();
+                txtTDS3_b.Clear();
+                txtTDS4_a.Clear();
+                txtTDS4_b.Clear();
                 chkServicio.Visible = false;
                 cbxDTDS.Visible = true;
                 cbxDTDS.SelectedItem = cbxDTDS.Items[0];
@@ -555,22 +561,24 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Serie.Uniforme
 
             }
         }
-
         private void chkServicio_CheckedChanged(object sender, EventArgs e)
         {
-
             if (chkServicio.Checked == true)
             {
-
                 lblTEA_a.Visible = false;
                 lblTEA_b.Visible = false;
+                txtTEA_a.Visible = false;
+                txtTEA_b.Visible = false;
+                txtTEA_a.Clear();
+                txtTEA_b.Clear();
                 chkArribo.Visible = false;
                 cbxDTEA.Visible = true;
                 cbxDTEA.SelectedItem = cbxDTEA.Items[0];
             }
             else
             {
-
+                txtTEA_a.Visible = true;
+                txtTEA_b.Visible = true;
                 lblTEA_a.Visible = true;
                 lblTEA_b.Visible = true;
                 chkArribo.Visible = true;

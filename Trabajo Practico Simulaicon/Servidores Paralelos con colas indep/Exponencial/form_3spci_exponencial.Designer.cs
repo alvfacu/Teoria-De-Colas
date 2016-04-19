@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend16 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend17 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend18 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_3spci_exponencial));
             this.label12 = new System.Windows.Forms.Label();
             this.utilizacion_serv3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dem_prom_cli_s3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -94,10 +95,10 @@
             // 
             // utilizacion_serv3
             // 
-            chartArea10.Name = "ChartArea1";
-            this.utilizacion_serv3.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.utilizacion_serv3.Legends.Add(legend10);
+            chartArea1.Name = "ChartArea1";
+            this.utilizacion_serv3.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.utilizacion_serv3.Legends.Add(legend1);
             this.utilizacion_serv3.Location = new System.Drawing.Point(634, 483);
             this.utilizacion_serv3.Name = "utilizacion_serv3";
             this.utilizacion_serv3.Size = new System.Drawing.Size(292, 178);
@@ -106,10 +107,10 @@
             // 
             // dem_prom_cli_s3
             // 
-            chartArea11.Name = "ChartArea1";
-            this.dem_prom_cli_s3.ChartAreas.Add(chartArea11);
-            legend11.Name = "Legend1";
-            this.dem_prom_cli_s3.Legends.Add(legend11);
+            chartArea2.Name = "ChartArea1";
+            this.dem_prom_cli_s3.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.dem_prom_cli_s3.Legends.Add(legend2);
             this.dem_prom_cli_s3.Location = new System.Drawing.Point(634, 277);
             this.dem_prom_cli_s3.Name = "dem_prom_cli_s3";
             this.dem_prom_cli_s3.Size = new System.Drawing.Size(292, 178);
@@ -127,10 +128,10 @@
             // 
             // cli_en_cola_s3
             // 
-            chartArea12.Name = "ChartArea1";
-            this.cli_en_cola_s3.ChartAreas.Add(chartArea12);
-            legend12.Name = "Legend1";
-            this.cli_en_cola_s3.Legends.Add(legend12);
+            chartArea3.Name = "ChartArea1";
+            this.cli_en_cola_s3.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.cli_en_cola_s3.Legends.Add(legend3);
             this.cli_en_cola_s3.Location = new System.Drawing.Point(634, 71);
             this.cli_en_cola_s3.Name = "cli_en_cola_s3";
             this.cli_en_cola_s3.Size = new System.Drawing.Size(292, 178);
@@ -148,10 +149,10 @@
             // 
             // utilizacion_serv2
             // 
-            chartArea13.Name = "ChartArea1";
-            this.utilizacion_serv2.ChartAreas.Add(chartArea13);
-            legend13.Name = "Legend1";
-            this.utilizacion_serv2.Legends.Add(legend13);
+            chartArea4.Name = "ChartArea1";
+            this.utilizacion_serv2.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.utilizacion_serv2.Legends.Add(legend4);
             this.utilizacion_serv2.Location = new System.Drawing.Point(323, 483);
             this.utilizacion_serv2.Name = "utilizacion_serv2";
             this.utilizacion_serv2.Size = new System.Drawing.Size(292, 178);
@@ -169,10 +170,10 @@
             // 
             // dem_prom_cli_s2
             // 
-            chartArea14.Name = "ChartArea1";
-            this.dem_prom_cli_s2.ChartAreas.Add(chartArea14);
-            legend14.Name = "Legend1";
-            this.dem_prom_cli_s2.Legends.Add(legend14);
+            chartArea5.Name = "ChartArea1";
+            this.dem_prom_cli_s2.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.dem_prom_cli_s2.Legends.Add(legend5);
             this.dem_prom_cli_s2.Location = new System.Drawing.Point(323, 277);
             this.dem_prom_cli_s2.Name = "dem_prom_cli_s2";
             this.dem_prom_cli_s2.Size = new System.Drawing.Size(292, 178);
@@ -190,10 +191,10 @@
             // 
             // cli_en_cola_s2
             // 
-            chartArea15.Name = "ChartArea1";
-            this.cli_en_cola_s2.ChartAreas.Add(chartArea15);
-            legend15.Name = "Legend1";
-            this.cli_en_cola_s2.Legends.Add(legend15);
+            chartArea6.Name = "ChartArea1";
+            this.cli_en_cola_s2.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.cli_en_cola_s2.Legends.Add(legend6);
             this.cli_en_cola_s2.Location = new System.Drawing.Point(323, 71);
             this.cli_en_cola_s2.Name = "cli_en_cola_s2";
             this.cli_en_cola_s2.Size = new System.Drawing.Size(292, 178);
@@ -211,10 +212,10 @@
             // 
             // utilizacion_serv1
             // 
-            chartArea16.Name = "ChartArea1";
-            this.utilizacion_serv1.ChartAreas.Add(chartArea16);
-            legend16.Name = "Legend1";
-            this.utilizacion_serv1.Legends.Add(legend16);
+            chartArea7.Name = "ChartArea1";
+            this.utilizacion_serv1.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.utilizacion_serv1.Legends.Add(legend7);
             this.utilizacion_serv1.Location = new System.Drawing.Point(12, 483);
             this.utilizacion_serv1.Name = "utilizacion_serv1";
             this.utilizacion_serv1.Size = new System.Drawing.Size(292, 178);
@@ -232,10 +233,10 @@
             // 
             // dem_prom_cli_s1
             // 
-            chartArea17.Name = "ChartArea1";
-            this.dem_prom_cli_s1.ChartAreas.Add(chartArea17);
-            legend17.Name = "Legend1";
-            this.dem_prom_cli_s1.Legends.Add(legend17);
+            chartArea8.Name = "ChartArea1";
+            this.dem_prom_cli_s1.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.dem_prom_cli_s1.Legends.Add(legend8);
             this.dem_prom_cli_s1.Location = new System.Drawing.Point(12, 279);
             this.dem_prom_cli_s1.Name = "dem_prom_cli_s1";
             this.dem_prom_cli_s1.Size = new System.Drawing.Size(292, 178);
@@ -253,10 +254,10 @@
             // 
             // cli_en_cola_s1
             // 
-            chartArea18.Name = "ChartArea1";
-            this.cli_en_cola_s1.ChartAreas.Add(chartArea18);
-            legend18.Name = "Legend1";
-            this.cli_en_cola_s1.Legends.Add(legend18);
+            chartArea9.Name = "ChartArea1";
+            this.cli_en_cola_s1.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.cli_en_cola_s1.Legends.Add(legend9);
             this.cli_en_cola_s1.Location = new System.Drawing.Point(12, 71);
             this.cli_en_cola_s1.Name = "cli_en_cola_s1";
             this.cli_en_cola_s1.Size = new System.Drawing.Size(292, 178);
@@ -305,7 +306,7 @@
             // 
             // txtNroMax
             // 
-            this.txtNroMax.Location = new System.Drawing.Point(603, 23);
+            this.txtNroMax.Location = new System.Drawing.Point(595, 23);
             this.txtNroMax.Name = "txtNroMax";
             this.txtNroMax.Size = new System.Drawing.Size(100, 20);
             this.txtNroMax.TabIndex = 87;
@@ -341,6 +342,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(945, 677);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -368,8 +370,12 @@
             this.Controls.Add(this.btn_simular);
             this.Controls.Add(this.txtHs);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "form_3spci_exponencial";
-            this.Text = "form_3spci_exponencial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Servidores paralelos con colas independientes y joking - Distribución Exponencial" +
+    "";
             ((System.ComponentModel.ISupportInitialize)(this.utilizacion_serv3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dem_prom_cli_s3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cli_en_cola_s3)).EndInit();

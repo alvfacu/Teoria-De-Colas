@@ -39,13 +39,11 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Paralelo.Uniforme
         public form_4sp_uniforme()
         {
             InitializeComponent();
-
         }
 
         private void btn_simular_Click(object sender, EventArgs e)
         {
-            //int msj = Validar(this.Controls);
-            int msj = 0;
+            int msj = Validar(this.Controls);
             if (msj == 0)
             {
                 c = form_cantidadservidores.nro + 1;
@@ -312,19 +310,19 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Paralelo.Uniforme
                         mensaje = "Verifique el formato las horas: deben ser enteras.";
                         break;
                     case (3):
-                        mensaje = "El TDS tiene que ser un decimal entre 0,1 y 1.";
+                        mensaje = "Los TDS tienen que ser números decimales entre 0,1 y 1.";
                         break;
                     case (4):
                         mensaje = "El TEA tiene que ser un decimal entre 0,1 y 1.";
                         break;
                     case (5):
-                        mensaje = "El TDS tiene que ser un decimal entre 0,1 y 1.";
+                        mensaje = "Los TDS tienen que ser números decimales entre 0,1 y 1.";
                         break;
                     case (6):
                         mensaje = "El TEA tiene que ser un decimal entre 0,1 y 1.";
                         break;
                     case (7):
-                        mensaje = "Debe ingresar un TEA o un TDS";
+                        mensaje = "Debe ingresar el TEA o los TDS";
                         break;
                     case (8):
                         mensaje = "El valor de a no puede ser mayor que el de b";
@@ -332,7 +330,7 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Paralelo.Uniforme
                     default: break;
 
                 }
-                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK);
+                MessageBox.Show(mensaje, " ¡ Atención !", MessageBoxButtons.OK);
             }
         }
 
@@ -351,7 +349,7 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Paralelo.Uniforme
             bool est = false;
             foreach (Control c in controls)
             {
-                if (c is TextBox & c.Text == String.Empty)
+                if (c.Visible == true & c is TextBox & c.Text == String.Empty)
                 {
                     msj = 1;
                     est = true;
@@ -364,30 +362,23 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Paralelo.Uniforme
                 {
                     msj = 2;
                 }
-                else if (this.chkArribo.Checked)
+                //else if (this.chkArribo.Checked)
+                //{
+                if (txtTEA_a.Visible == true)
                 {
                     if (txtTEA_a.Text.Contains("."))
                     {
                         txtTEA_a.Text = txtTEA_a.Text.Replace('.', ',');
                     }
-                    if (!(Double.TryParse(txtTEA_a.Text, out res)))
-                    {
-                        msj = 4;
-                    }
-                    else if (Convert.ToDouble(txtTEA_a.Text) < 0.1 || Convert.ToDouble(txtTEA_a.Text) > 1)
-                    {
-                        msj = 6;
-                    }
-
                     if (txtTEA_b.Text.Contains("."))
                     {
                         txtTEA_b.Text = txtTEA_b.Text.Replace('.', ',');
                     }
-                    if (!(Double.TryParse(txtTEA_b.Text, out res)))
+                    if (!(Double.TryParse(txtTEA_a.Text, out res)) || !(Double.TryParse(txtTEA_b.Text, out res)))
                     {
                         msj = 4;
                     }
-                    else if (Convert.ToDouble(txtTEA_b.Text) < 0.1 || Convert.ToDouble(txtTEA_b.Text) > 1)
+                    else if ((Convert.ToDouble(txtTEA_a.Text) < 0.1 || Convert.ToDouble(txtTEA_a.Text) > 1) || (Convert.ToDouble(txtTEA_b.Text) < 0.1 || Convert.ToDouble(txtTEA_b.Text) > 1))
                     {
                         msj = 6;
                     }
@@ -396,7 +387,10 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Paralelo.Uniforme
                         msj = 8;
                     }
                 }
-                else if (this.chkServicio.Checked)
+                //}
+                //else if (this.chkServicio.Checked)
+                //{
+                if (txtTDS1_a.Visible == true)
                 {
                     if (txtTDS1_a.Text.Contains("."))
                     {
@@ -482,10 +476,11 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Paralelo.Uniforme
                         msj = 8;
                     }
                 }
-            }
-            else
-            {
-                msj = 7;
+                //}
+                /*else
+                {
+                    msj = 7;
+                }*/
             }
 
             return msj;
@@ -515,6 +510,14 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Paralelo.Uniforme
                 txtTDS3_b.Visible = false;
                 txtTDS4_a.Visible = false;
                 txtTDS4_b.Visible = false;
+                txtTDS1_a.Clear();
+                txtTDS1_b.Clear();
+                txtTDS2_a.Clear();
+                txtTDS2_b.Clear();
+                txtTDS3_a.Clear();
+                txtTDS3_b.Clear();
+                txtTDS4_a.Clear();
+                txtTDS4_b.Clear();
                 chkServicio.Visible = false;
                 cbxDTDS.Visible = true;
                 cbxDTDS.SelectedItem = cbxDTDS.Items[0];
@@ -549,19 +552,22 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Paralelo.Uniforme
 
         private void chkServicio_CheckedChanged(object sender, EventArgs e)
         {
-        
             if (chkServicio.Checked == true)
             {
-
                 lblTEA_a.Visible = false;
                 lblTEA_b.Visible = false;
+                txtTEA_a.Visible = false;
+                txtTEA_b.Visible = false;
+                txtTEA_a.Clear();
+                txtTEA_b.Clear();
                 chkArribo.Visible = false;
                 cbxDTEA.Visible = true;
                 cbxDTEA.SelectedItem = cbxDTEA.Items[0];
             }
             else
             {
-
+                txtTEA_a.Visible = true;
+                txtTEA_b.Visible = true;
                 lblTEA_a.Visible = true;
                 lblTEA_b.Visible = true;
                 chkArribo.Visible = true;
@@ -569,6 +575,6 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Paralelo.Uniforme
 
             }
         }
-                
+
     }
 }

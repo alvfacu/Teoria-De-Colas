@@ -35,7 +35,9 @@ namespace Trabajo_Practico_Simulacion.Servidor_Simple
                 lblTDS_a.Visible = false;
                 lblTDS_b.Visible = false;
                 txtTDS_a.Visible = false;
+                txtTDS_a.Clear();
                 txtTDS_b.Visible = false;
+                txtTDS_b.Clear();
                 cbxDTDS.Visible = true;
                 cbxDTDS.SelectedItem = cbxDTDS.Items[0];
             }
@@ -58,7 +60,9 @@ namespace Trabajo_Practico_Simulacion.Servidor_Simple
                 lblTEA_a.Visible = false;
                 lblTEA_b.Visible = false;
                 txtTEA_a.Visible = false;
+                txtTEA_a.Clear();
                 txtTEA_b.Visible = false;
+                txtTEA_b.Clear();
                 cbxDTEA.Visible = true;
                 cbxDTEA.SelectedItem = cbxDTDS.Items[0];
             }
@@ -193,27 +197,27 @@ namespace Trabajo_Practico_Simulacion.Servidor_Simple
                         mensaje = "Verifique el formato las horas: deben ser enteras.";
                         break;
                     case (3):
-                        mensaje = "El TDS tiene que ser un decimal entre 0,1 y 1.";
+                        mensaje = "Los parámetros del TDS tienen que ser números decimales entre 0,1 y 1.";
                         break;
                     case (4):
-                        mensaje = "El TEA tiene que ser un decimal entre 0,1 y 1.";
+                        mensaje = "Los parámetros del TEA tienen que ser números decimales entre 0,1 y 1.";
                         break;
                     case (5):
-                        mensaje = "El TDS tiene que ser un decimal entre 0,1 y 1.";
+                        mensaje = "Los parámetros del TDS tienen que ser números decimales entre 0,1 y 1.";
                         break;
                     case (6):
-                        mensaje = "El TEA tiene que ser un decimal entre 0,1 y 1.";
+                        mensaje = "Los parámetros del TEA tienen que ser números decimales entre 0,1 y 1.";
                         break;
                     case (7):
-                        mensaje = "Debe ingresar un TEA o un TDS";
+                        mensaje = "Debe ingresar los parámetros del TEA o del TDS";
                         break;
                     case (8):
-                        mensaje = "El valor de a no puede ser mayor que el de b";
+                        mensaje = "El valor de a no puede superar al de b";
                         break;
                     default: break;
 
                 }
-                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK);
+                MessageBox.Show(mensaje, "¡ Atención !", MessageBoxButtons.OK);
             }
         }
 

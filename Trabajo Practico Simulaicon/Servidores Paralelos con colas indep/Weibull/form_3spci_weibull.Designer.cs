@@ -46,6 +46,7 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_3spci_weibull));
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -341,6 +342,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(951, 676);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -368,8 +370,11 @@
             this.Controls.Add(this.btn_simular);
             this.Controls.Add(this.txtHs);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "form_3spci_weibull";
-            this.Text = "form_3spci_weibull";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Servidores paralelos con colas independientes y joking - Distribución Weibull";
             ((System.ComponentModel.ISupportInitialize)(this.utilizacion_serv3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dem_prom_cli_s3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cli_en_cola_s3)).EndInit();

@@ -219,13 +219,13 @@ namespace Trabajo_Practico_Simulacion
                         mensaje = "Verifique el formato las horas: deben ser enteras.";
                         break;
                     case (3):
-                        mensaje = "El TDS tiene que ser un decimal entre 0,1 y 1.";
+                        mensaje = "Los TDS tienen que ser números decimales entre 0,1 y 1.";
                         break;
                     case (4):
                         mensaje = "El TEA tiene que ser un decimal entre 0,1 y 1.";
                         break;
                     case (5):
-                        mensaje = "El TDS tiene que ser un decimal entre 0,1 y 1.";
+                        mensaje = "Los TDS tienen que ser números decimales entre 0,1 y 1.";
                         break;
                     case (6):
                         mensaje = "El TEA tiene que ser un decimal entre 0,1 y 1.";
@@ -236,7 +236,7 @@ namespace Trabajo_Practico_Simulacion
                     default: break;
 
                 }
-                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK);
+                MessageBox.Show(mensaje, "¡ Atención !", MessageBoxButtons.OK);
             }
         }
 
