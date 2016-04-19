@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Trabajo_Practico_Simulaicon
 {
@@ -50,6 +51,45 @@ namespace Trabajo_Practico_Simulaicon
             //tiempo_prox_arribo = Exponential.Sample(TEA);
         }
 
+
+        public Servidores_paralelos_con_colas_indep(char t,double teaa,double teab, double tdsa, double tdsb, int nro_max, double prob)
+        {
+            tipo = 'd';
+            nro_cli_max = nro_max;
+            prob_cambio = prob; 
+
+
+            tea_a = teaa;
+            tea_b = teab;
+
+            tds_a = tdsa;
+            tds_b = tdsb;
+            tipotds = t;
+            tipotea = t;
+            reloj = tiempo_prox_arribo = 0;
+            for (int i = 0; i < 3; i++)
+            {
+
+
+                area_bajo_b.Add(0);
+                area_bajo_q.Add(0);
+                tiempo_prox_partida.Add(10000000000);
+                demora_total.Add(0);
+                nro_cli_comp_dem.Add(0);
+                estado_serv.Add(0);
+                TIOS.Add(0);
+            }
+            if (tipo == 'e')
+            {
+                tiempo_prox_arribo = -TEA * Math.Log(NrosAleatorios.DameNro());
+                //tiempo_prox_arribo = Exponential.Sample(TEA);
+            }
+            else
+            {
+                tiempo_prox_arribo = DameValor(tea_a, tea_b);
+            }
+
+        }
         public char rutinadetiempo()
         {
             //Con el siguiente for e if determino si el proximo evento es una partida y de que servidor es
