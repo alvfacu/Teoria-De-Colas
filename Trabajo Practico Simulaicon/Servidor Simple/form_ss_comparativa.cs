@@ -63,9 +63,26 @@ namespace Trabajo_Practico_Simulacion.Servidor_Simple
             NrosAleatorios.ReiniciarR();
 
             #region Uniforme 0.3
-            
+            tea = new List<double>() { 0.1, 0.3 };
+            tds = new List<double>() { 0.1, 0.3 };
+            ServidorSimple ServidorSimple_Uni = new ServidorSimple('u',tea,tds);
+            while (ServidorSimple_Uni.reloj < Convert.ToDouble(100))
+            {
+                char proximo_evento = ServidorSimple_Uni.rutinadetiempo();
+                if (proximo_evento == 'a')
+                {
+                    ServidorSimple_Uni.arribo();
+                }
+                else
+                {
+                    ServidorSimple_Uni.partida();
+                }
+            }
+            cant_cli_cola.Series[1].Points.Add(new DataPoint(0.3, ServidorSimple_Uni.CantPromClientesCola));
+            dem_prom.Series[1].Points.Add(new DataPoint(0.3, ServidorSimple_Uni.DemPromedio));
+            utilizacion.Series[1].Points.Add(new DataPoint(0.3, ServidorSimple_Uni.UtilServidor));
             #endregion
-            
+
             NrosAleatorios.ReiniciarR();
 
             #region Weibull 0.3
@@ -115,7 +132,24 @@ namespace Trabajo_Practico_Simulacion.Servidor_Simple
             NrosAleatorios.ReiniciarR();
 
             #region Uniforme 0.5
-
+            tea = new List<double>() { 0.4, 0.6 };
+            tds = new List<double>() { 0.4, 0.6 };
+            ServidorSimple_Uni = new ServidorSimple('u', tea, tds);
+            while (ServidorSimple_Uni.reloj < Convert.ToDouble(100))
+            {
+                char proximo_evento = ServidorSimple_Uni.rutinadetiempo();
+                if (proximo_evento == 'a')
+                {
+                    ServidorSimple_Uni.arribo();
+                }
+                else
+                {
+                    ServidorSimple_Uni.partida();
+                }
+            }
+            cant_cli_cola.Series[1].Points.Add(new DataPoint(0.5, ServidorSimple_Uni.CantPromClientesCola));
+            dem_prom.Series[1].Points.Add(new DataPoint(0.5, ServidorSimple_Uni.DemPromedio));
+            utilizacion.Series[1].Points.Add(new DataPoint(0.5, ServidorSimple_Uni.UtilServidor));
             #endregion
 
             NrosAleatorios.ReiniciarR();
@@ -164,9 +198,26 @@ namespace Trabajo_Practico_Simulacion.Servidor_Simple
             #endregion
 
             NrosAleatorios.ReiniciarR();
-            
-            #region Uniforme 0.7
 
+            #region Uniforme 0.7
+            tea = new List<double>() { 0.7, 0.99 };
+            tds = new List<double>() { 0.7, 0.99 };
+            ServidorSimple_Uni = new ServidorSimple('u', tea, tds);
+            while (ServidorSimple_Uni.reloj < Convert.ToDouble(100))
+            {
+                char proximo_evento = ServidorSimple_Uni.rutinadetiempo();
+                if (proximo_evento == 'a')
+                {
+                    ServidorSimple_Uni.arribo();
+                }
+                else
+                {
+                    ServidorSimple_Uni.partida();
+                }
+            }
+            cant_cli_cola.Series[1].Points.Add(new DataPoint(0.7, ServidorSimple_Uni.CantPromClientesCola));
+            dem_prom.Series[1].Points.Add(new DataPoint(0.7, ServidorSimple_Uni.DemPromedio));
+            utilizacion.Series[1].Points.Add(new DataPoint(0.7, ServidorSimple_Uni.UtilServidor));
             #endregion
 
             NrosAleatorios.ReiniciarR();

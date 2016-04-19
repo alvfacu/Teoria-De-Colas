@@ -6,11 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Trabajo_Practico_Simulaicon;
 using System.Windows.Forms.DataVisualization.Charting;
-using MySql.Data.MySqlClient;
+using Trabajo_Practico_Simulaicon;
 
-namespace Trabajo_Practico_Simulacion.Servidores_Paralelos_con_colas_indep.Uniforme
+namespace Trabajo_Practico_Simulacion.Servidores_Paralelos_con_colas_indep
 {
     public partial class form_3spci_uniforme : Form
     {
@@ -97,10 +96,9 @@ namespace Trabajo_Practico_Simulacion.Servidores_Paralelos_con_colas_indep.Unifo
 
                 double max = Convert.ToDouble(txtPmax.Text);
 
-                for (double i = Convert.ToDouble(txtPmin.Text); i <= max; i = i + 0.1)
-                {
-                    Servidores_paralelos_con_colas_indep servidores = new Servidores_paralelos_con_colas_indep('w',0.1,0.5,0.6,0.9,int.Parse(txtNroMax.Text),i);
-
+                for (double i = Convert.ToDouble(txtPmin.Text); i <= max; i = i + 0.05)
+                {                   
+                    Servidores_paralelos_con_colas_indep servidores = new Servidores_paralelos_con_colas_indep('u', 0.1, 0.4, 0.1, 0.4, int.Parse(txtNroMax.Text), i);
 
                     while (servidores.reloj < Convert.ToDouble(txtHs.Text))
                     {
@@ -189,8 +187,6 @@ namespace Trabajo_Practico_Simulacion.Servidores_Paralelos_con_colas_indep.Unifo
                 */
             }
         }
-
-
 
         private double DameMaximo(List<double> valores)
         {

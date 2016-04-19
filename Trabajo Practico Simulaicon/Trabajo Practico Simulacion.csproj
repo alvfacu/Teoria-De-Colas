@@ -253,12 +253,18 @@
     <Compile Include="Servidores Paralelos con colas indep\Exponencial\form_3spci_exponencial.Designer.cs">
       <DependentUpon>form_3spci_exponencial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Servidores Paralelos con colas indep\Servidores paralelos con colas indep.cs" />
     <Compile Include="Servidores Paralelos con colas indep\Uniforme\form_3spci_uniforme.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Servidores Paralelos con colas indep\Uniforme\form_3spci_uniforme.Designer.cs">
       <DependentUpon>form_3spci_uniforme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servidores Paralelos con colas indep\Servidores paralelos con colas indep.cs" />
+    <Compile Include="Servidores Paralelos con colas indep\Weibull\form_3spci_weibull.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servidores Paralelos con colas indep\Weibull\form_3spci_weibull.Designer.cs">
+      <DependentUpon>form_3spci_weibull.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="form_seleccion_distribucion_ss.resx">
       <DependentUpon>form_seleccion_distribucion_ss.cs</DependentUpon>
@@ -353,6 +359,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Servidores Paralelos con colas indep\Uniforme\form_3spci_uniforme.resx">
       <DependentUpon>form_3spci_uniforme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servidores Paralelos con colas indep\Weibull\form_3spci_weibull.resx">
+      <DependentUpon>form_3spci_weibull.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />

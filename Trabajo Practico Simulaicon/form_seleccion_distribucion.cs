@@ -13,6 +13,7 @@ using Trabajo_Practico_Simulacion.Servidores_en_Paralelo.Weibull;
 using Trabajo_Practico_Simulacion.Servidores_en_Serie;
 using Trabajo_Practico_Simulacion.Servidores_en_Serie.Uniforme;
 using Trabajo_Practico_Simulacion.Servidores_en_Serie.Weibull;
+using Trabajo_Practico_Simulacion.Servidores_Paralelos_con_colas_indep;
 using Trabajo_Practico_Simulacion.Servidores_Paralelos_con_colas_indep.Exponencial;
 using Trabajo_Practico_Simulacion.Servidores_Paralelos_con_colas_indep.Uniforme;
 
@@ -309,6 +310,15 @@ namespace Trabajo_Practico_Simulaicon
                                     }
                                     break;
                                 }
+                        }
+                        break;
+                    }
+                case ('d'):
+                    {
+                        form_3spci_weibull form = new form_3spci_weibull();
+                        if (form.ShowDialog() != DialogResult.OK)
+                        {
+                            this.Dispose();
                         }
                         break;
                     }

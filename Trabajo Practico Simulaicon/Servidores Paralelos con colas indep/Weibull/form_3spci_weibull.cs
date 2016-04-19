@@ -10,21 +10,18 @@ using Trabajo_Practico_Simulaicon;
 using System.Windows.Forms.DataVisualization.Charting;
 using MySql.Data.MySqlClient;
 
-namespace Trabajo_Practico_Simulacion.Servidores_Paralelos_con_colas_indep.Exponencial
+namespace Trabajo_Practico_Simulacion.Servidores_Paralelos_con_colas_indep.Uniforme
 {
-    public partial class form_3spci_exponencial : Form
+    public partial class form_3spci_weibull : Form
     {
-        string nom_graf = "Exponencial";
-        public form_3spci_exponencial()
+        string nom_graf = "Weibull";
+        public form_3spci_weibull()
         {
             InitializeComponent();
         }
 
         private void btn_simular_Click(object sender, EventArgs e)
         {
-            //int msj = Validar(this.Controls);
-
-
             if (/*msj == 0*/true)
             {
                 cli_en_cola_s1.Series.Clear();
@@ -102,8 +99,7 @@ namespace Trabajo_Practico_Simulacion.Servidores_Paralelos_con_colas_indep.Expon
 
                 for (double i = Convert.ToDouble(txtPmin.Text); i <= max; i = i + 0.05)
                 {
-                    Servidores_paralelos_con_colas_indep servidores = new Servidores_paralelos_con_colas_indep(0.3, 0.6, int.Parse(txtNroMax.Text), i);
-
+                    Servidores_paralelos_con_colas_indep servidores = new Servidores_paralelos_con_colas_indep('w',0.1,0.5,0.6,0.9,int.Parse(txtNroMax.Text),i);
 
                     while (servidores.reloj < Convert.ToDouble(txtHs.Text))
                     {
@@ -138,7 +134,7 @@ namespace Trabajo_Practico_Simulacion.Servidores_Paralelos_con_colas_indep.Expon
                     utilizacion_serv3.Series[nom_graf].Points.Add(new DataPoint(i, servidores.UtilServidor(2)));
                     utilizacion1.Add(servidores.UtilServidor(0));
                     utilizacion2.Add(servidores.UtilServidor(1));
-                    utilizacion3.Add(servidores.UtilServidor(2));                                    
+                    utilizacion3.Add(servidores.UtilServidor(2));
 
                     NrosAleatorios.ReiniciarR();
                 }
@@ -192,8 +188,7 @@ namespace Trabajo_Practico_Simulacion.Servidores_Paralelos_con_colas_indep.Expon
                 */
             }
         }
-
-
+        
         private double DameMaximo(List<double> valores)
         {
 
@@ -232,7 +227,5 @@ namespace Trabajo_Practico_Simulacion.Servidores_Paralelos_con_colas_indep.Expon
 
             return msj;
         }
-
-
     }
 }
