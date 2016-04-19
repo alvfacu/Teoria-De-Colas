@@ -238,24 +238,23 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Serie.Weibull
                         mensaje = "Verifique el formato las horas: deben ser enteras.";
                         break;
                     case (3):
-                        mensaje = "El TDS tiene que ser un decimal entre 0,1 y 1.";
+                        mensaje = "Los parámetros del TDS tienen que ser números decimales entre 0,1 y 1.";
                         break;
                     case (4):
-                        mensaje = "El TEA tiene que ser un decimal entre 0,1 y 1.";
+                        mensaje = "Los parámetros del TEA tienen que ser números decimales entre 0,1 y 1.";
                         break;
                     case (5):
-                        mensaje = "El TDS tiene que ser un decimal entre 0,1 y 1.";
+                        mensaje = "Los parámetros del TDS tienen que ser números decimales entre 0,1 y 1.";
                         break;
                     case (6):
-                        mensaje = "El TEA tiene que ser un decimal entre 0,1 y 1.";
+                        mensaje = "Los parámetros del TEA tienen que ser números decimales entre 0,1 y 1.";
                         break;
                     case (7):
-                        mensaje = "Debe ingresar un TEA o un TDS";
+                        mensaje = "Debe ingresar los parámetros del TEA o del TDS";
                         break;
                     default: break;
-
                 }
-                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK);
+                MessageBox.Show(mensaje, "¡ Atención !", MessageBoxButtons.OK);
             }
         }
 

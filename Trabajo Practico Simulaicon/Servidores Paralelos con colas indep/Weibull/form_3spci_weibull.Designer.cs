@@ -116,21 +116,21 @@
             this.txtNroMax.Location = new System.Drawing.Point(603, 21);
             this.txtNroMax.Name = "txtNroMax";
             this.txtNroMax.Size = new System.Drawing.Size(100, 20);
-            this.txtNroMax.TabIndex = 113;
+            this.txtNroMax.TabIndex = 4;
             // 
             // txtPmax
             // 
             this.txtPmax.Location = new System.Drawing.Point(359, 21);
             this.txtPmax.Name = "txtPmax";
             this.txtPmax.Size = new System.Drawing.Size(100, 20);
-            this.txtPmax.TabIndex = 112;
+            this.txtPmax.TabIndex = 3;
             // 
             // txtPmin
             // 
             this.txtPmin.Location = new System.Drawing.Point(204, 21);
             this.txtPmin.Name = "txtPmin";
             this.txtPmin.Size = new System.Drawing.Size(100, 20);
-            this.txtPmin.TabIndex = 111;
+            this.txtPmin.TabIndex = 2;
             // 
             // label12
             // 
@@ -317,7 +317,7 @@
             this.btn_simular.Location = new System.Drawing.Point(851, 22);
             this.btn_simular.Name = "btn_simular";
             this.btn_simular.Size = new System.Drawing.Size(75, 23);
-            this.btn_simular.TabIndex = 92;
+            this.btn_simular.TabIndex = 5;
             this.btn_simular.Text = "Simular";
             this.btn_simular.UseVisualStyleBackColor = true;
             this.btn_simular.Click += new System.EventHandler(this.btn_simular_Click);
@@ -327,7 +327,7 @@
             this.txtHs.Location = new System.Drawing.Point(24, 22);
             this.txtHs.Name = "txtHs";
             this.txtHs.Size = new System.Drawing.Size(100, 20);
-            this.txtHs.TabIndex = 91;
+            this.txtHs.TabIndex = 1;
             // 
             // label1
             // 

@@ -22,10 +22,8 @@ namespace Trabajo_Practico_Simulacion.Servidores_Paralelos_con_colas_indep.Expon
 
         private void btn_simular_Click(object sender, EventArgs e)
         {
-            //int msj = Validar(this.Controls);
-
-
-            if (/*msj == 0*/true)
+            int msj = Validar(this.Controls);
+            if (msj == 0)
             {
                 cli_en_cola_s1.Series.Clear();
                 cli_en_cola_s2.Series.Clear();
@@ -160,7 +158,6 @@ namespace Trabajo_Practico_Simulacion.Servidores_Paralelos_con_colas_indep.Expon
             }
             else
             {
-                /*
                 string mensaje = null;
                 switch (msj)
                 {
@@ -171,25 +168,21 @@ namespace Trabajo_Practico_Simulacion.Servidores_Paralelos_con_colas_indep.Expon
                         mensaje = "Verifique el formato las horas: deben ser enteras.";
                         break;
                     case (3):
-                        mensaje = "El TDS tiene que ser un decimal entre 0,1 y 1.";
+                        mensaje = "Las probabilidades deben ser números decimales menores a 1.";
                         break;
                     case (4):
-                        mensaje = "El TEA tiene que ser un decimal entre 0,1 y 1.";
+                        mensaje = "La probabilidad mínima debe ser menor a la probabilidad máxima.";
                         break;
                     case (5):
-                        mensaje = "El TDS tiene que ser un decimal entre 0,1 y 1.";
+                        mensaje = "Las probabilidades no deben ser mayores a 1.";
                         break;
                     case (6):
-                        mensaje = "El TEA tiene que ser un decimal entre 0,1 y 1.";
-                        break;
-                    case (7):
-                        mensaje = "Debe ingresar un TEA o un TDS";
+                        mensaje = "El número máximo de clientes en cola debe ser un número entero positivo.";
                         break;
                     default: break;
 
                 }
-                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK);
-                */
+                MessageBox.Show(mensaje, "¡ Atención !", MessageBoxButtons.OK);
             }
         }
 
@@ -204,7 +197,7 @@ namespace Trabajo_Practico_Simulacion.Servidores_Paralelos_con_colas_indep.Expon
         private int Validar(Control.ControlCollection controls)
         {
             int result;
-            //double res;
+            double res;
             int msj = 0;
             bool est = false;
             foreach (Control c in controls)
@@ -222,12 +215,30 @@ namespace Trabajo_Practico_Simulacion.Servidores_Paralelos_con_colas_indep.Expon
                 {
                     msj = 2;
                 }
-
-                else
+                if (txtPmin.Text.Contains("."))
                 {
-                    msj = 7;
+                    txtPmin.Text = txtPmin.Text.Replace('.', ',');
                 }
-
+                if (txtPmax.Text.Contains("."))
+                {
+                    txtPmax.Text = txtPmax.Text.Replace('.', ',');
+                }
+                if (!(Double.TryParse(txtPmin.Text, out res)) || !(Double.TryParse(txtPmax.Text, out res)))
+                {
+                    msj = 3; // Las probabilidades deben ser números decimales menores a 1.
+                }
+                else if ((Convert.ToDouble(txtPmin.Text) > Convert.ToDouble(txtPmax.Text)))
+                {
+                    msj = 4; // La probabilidad mínima debe ser menor a la probabilidad máxima.
+                }
+                else if ((Convert.ToDouble(txtPmin.Text) > 1 || Convert.ToDouble(txtPmax.Text) > 1))
+                {
+                    msj = 5; // Las probabilidades no deben ser mayores a 1.
+                }
+                if (!(Int32.TryParse(txtNroMax.Text, out result)))
+                {
+                    msj = 6; // El número máximo de clientes en cola debe ser un número entero positivo.
+                }
             }
 
             return msj;

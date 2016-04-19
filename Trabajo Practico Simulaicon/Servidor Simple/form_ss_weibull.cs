@@ -195,9 +195,6 @@ namespace Trabajo_Practico_Simulacion.Servidor_Simple
                     case (7):
                         mensaje = "Debe ingresar los parámetros del TEA o del TDS";
                         break;
-                    case (8):
-                        mensaje = "El valor de a no puede superar al de b";
-                        break;
                     default: break;
 
                 }
