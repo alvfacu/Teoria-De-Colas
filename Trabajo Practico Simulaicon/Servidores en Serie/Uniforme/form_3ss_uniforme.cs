@@ -290,6 +290,9 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Serie.Uniforme
                     case (8):
                         mensaje = "El valor de a no puede ser mayor que el de b";
                         break;
+                    case (9):
+                        mensaje = "Debe tildar el tiempo que desea ingresar.";
+                        break;
                     default: break;
 
                 }
@@ -323,6 +326,10 @@ namespace Trabajo_Practico_Simulacion.Servidores_en_Serie.Uniforme
                 if (!(Int32.TryParse(txtHs.Text, out result)))
                 {
                     msj = 2;
+                }
+                if(chkArribo.Checked == chkServicio.Checked)
+                {
+                    msj = 9;
                 }
                 //else if (this.chkArribo.Checked)
                 //{

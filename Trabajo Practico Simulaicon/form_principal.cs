@@ -19,7 +19,7 @@ namespace Trabajo_Practico_Simulaicon
             MyToolTip.SetToolTip(this.btn_servidor_simple, "Servidor Simple");
             MyToolTip.SetToolTip(this.btn_dos_serv_serie, "Servidores En Serie");
             MyToolTip.SetToolTip(this.btn_multiples, "Servidores Paralelos");
-            MyToolTip.SetToolTip(this.btn_jocking, "Servidores Paralelos con Jocking");
+            MyToolTip.SetToolTip(this.btn_jocking, "Servidores Paralelos con Jockeying");
         }
 
         private void btn_servidor_simple_Click(object sender, EventArgs e)

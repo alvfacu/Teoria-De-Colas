@@ -209,10 +209,13 @@ namespace Trabajo_Practico_Simulacion.Servidor_Simple
                         mensaje = "Los parámetros del TEA tienen que ser números decimales entre 0,1 y 1.";
                         break;
                     case (7):
-                        mensaje = "Debe ingresar los parámetros del TEA o del TDS";
+                        mensaje = "Debe ingresar los parámetros del TEA o del TDS.";
                         break;
                     case (8):
-                        mensaje = "El valor de a no puede superar al de b";
+                        mensaje = "El valor de a no puede superar al de b.";
+                        break;
+                    case (9):
+                        mensaje = "Debe tildar el tiempo que desea ingresar.";
                         break;
                     default: break;
 
@@ -248,6 +251,10 @@ namespace Trabajo_Practico_Simulacion.Servidor_Simple
                 if (!(Int32.TryParse(txtHs.Text, out result)))
                 {
                     msj = 2;
+                }
+                if(chkArribo.Checked == chkServicio.Checked)
+                {
+                    msj = 9;
                 }
                 //else if (this.chkArribo.Checked)
                 //{

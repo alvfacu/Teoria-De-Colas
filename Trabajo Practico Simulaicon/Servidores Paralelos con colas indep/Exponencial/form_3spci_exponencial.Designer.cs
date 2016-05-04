@@ -374,8 +374,8 @@
             this.MaximizeBox = false;
             this.Name = "form_3spci_exponencial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Servidores paralelos con colas independientes y joking - Distribución Exponencial" +
-    "";
+            this.Text = "Servidores Paralelos con colas independientes con Jockeying - Distribución Expone" +
+    "ncial";
             ((System.ComponentModel.ISupportInitialize)(this.utilizacion_serv3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dem_prom_cli_s3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cli_en_cola_s3)).EndInit();
